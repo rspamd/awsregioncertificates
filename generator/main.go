@@ -101,7 +101,7 @@ func main() {
 	}
 	j.Const().Defs(ops...)
 
-	j.Func().Id("GetRegionCertStrings").Params().Map(String()).String().Block(
+	j.Func().Id("getRegionCertStrings").Params().Map(String()).String().Block(
 		Return(Map(String()).String().Values(d)),
 	)
 
