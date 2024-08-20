@@ -77,7 +77,7 @@ func main() {
 		}
 		if tt == html.TextToken && wantText {
 			token := tokenizer.Token()
-			regionCertMap[region] = token.String()
+			regionCertMap[region] = strings.ReplaceAll(token.String(), "\t", "")
 			wantText = false
 		}
 	}
