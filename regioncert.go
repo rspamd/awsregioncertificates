@@ -15,7 +15,7 @@ import (
 
 var (
 	// ErrNoKey is returned if an error is encountered processing embedded data
-	ErrNoKey         = errors.New("failed to extract key")
+	ErrNoKey = errors.New("failed to extract key")
 
 	// ErrRegionUnknown is returned if an unrecognised region was specified
 	ErrRegionUnknown = errors.New("region was unrecognized")
@@ -45,7 +45,6 @@ func (r *RegionKeys) ValidateID(region string, iib []byte, sig []byte) error {
 	}
 	return nil
 }
-
 
 // GetRegionKeys returns a map of regions to *rsa.PublicKey
 // or an error in case the embedded data could not be processed.
