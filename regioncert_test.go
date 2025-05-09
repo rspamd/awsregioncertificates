@@ -19,7 +19,7 @@ var (
 func ExampleRegionKeys_ValidateID() {
 	regionKeys, err := GetRegionKeys()
 	if err != nil {
-		fmt.Println(fmt.Sprintf("error loading region keys: %v", err))
+		fmt.Printf("error loading region keys: %v\n", err)
 		return
 	}
 	iid := []byte(`{
@@ -44,7 +44,7 @@ iZmPD09xyJSrSRwYvx8SFoBWzUXS1hd9T1ZxpqWtloe/k//YmK7h9f7rjuT3/CxDDCWrbsKp8F0N
 ck+YPKGzD+dtxEm6g1g=`)
 	err = regionKeys.ValidateID("us-east-1", iid, iidSig)
 	if err != nil {
-		fmt.Println(fmt.Sprintf("error validating instance ID: %v", err))
+		fmt.Printf("error validating instance ID: %v\n", err)
 		return
 	}
 	fmt.Println("validated OK")
